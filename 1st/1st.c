@@ -35,20 +35,22 @@ void	ft_found_pair(int *arr, int sum, int len)
 				ft_putchar(',');
 				ft_putnbr(arr[j]);
 				ft_putchar(')');
+				write(1, "\n", 1);
 				return;
 			}
 			j++;
 		}
 		i++;
 	}
+	write(1, "Pair not found\n", 15);
 }
 
 
 int	main(void)
 {
-	int	arr[] = {8, 7, 2, 5, 3, 1};
+	int	arr[] = {5, 2, 6, 8, 1, 9};
 	int	len;
 
 	len = sizeof(arr) / sizeof(arr[0]);
-	ft_found_pair(arr, 10, len);
+	ft_found_pair(arr, 11, len);
 }
